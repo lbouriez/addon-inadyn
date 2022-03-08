@@ -19,9 +19,9 @@ _Thanks to everyone having starred my repo! To star it click on the image below,
 ## About
 
 [Inadyn](https://github.com/troglobit/inadyn), or In-a-Dyn, is a small and simple Dynamic DNS, DDNS, client with HTTPS support. Commonly available in many GNU/Linux distributions, used in off the shelf routers and Internet gateways to automate the task of keeping your Internet name in sync with your public¹ IP address. It can also be used in installations with redundant (backup) connections to the Internet.
-Based on https://hub.docker.com/r/troglobit/inadyn
-Project house : https://github.com/troglobit/inadyn
-Some code borrowed from https://github.com/nalipaz/hassio-addons
+Based on [https://hub.docker.com/r/troglobit/inadyn](https://hub.docker.com/r/troglobit/inadyn)
+Project house : [https://github.com/troglobit/inadyn](https://github.com/troglobit/inadyn)
+Some code borrowed from [https://github.com/nalipaz/hassio-addons](https://github.com/nalipaz/hassio-addons)
 
 ## Installation
 
@@ -38,7 +38,7 @@ comparison to installing any other Hass.io add-on.
 ## Configuration
 
 To configure with addon options, no webUI.
-For configuration, see https://github.com/troglobit/inadyn
+For configuration, see [https://github.com/troglobit/inadyn](https://github.com/troglobit/inadyn)
 
 The available configuration options are as follows (this is filled in with some example data):
 

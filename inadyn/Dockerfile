@@ -38,6 +38,7 @@ COPY rootfs/ /
 ARG MODULES="00-banner.sh"
 
 # Automatic modules download
+# hadolint ignore=DL3008,DL3009,DL3018
 RUN if ! command -v bash >/dev/null 2>/dev/null; then (apt-get update && apt-get install -yqq --no-install-recommends bash || apk add --no-cache bash) >/dev/null; fi \
     && if ! command -v curl >/dev/null 2>/dev/null; then (apt-get update && apt-get install -yqq --no-install-recommends curl || apk add --no-cache curl) >/dev/null; fi \
     && mkdir -p /etc/cont-init.d \
@@ -51,6 +52,7 @@ ENV PACKAGES="curl \
     build-base libressl-dev ca-certificates npm"
 
 # Automatic apps & bashio
+# hadolint ignore=DL3008,DL3009,DL3018
 RUN if ! command -v bash >/dev/null 2>/dev/null; then (apt-get update && apt-get install -yqq --no-install-recommends bash || apk add --no-cache bash) >/dev/null; fi \
     && if ! command -v curl >/dev/null 2>/dev/null; then (apt-get update && apt-get install -yqq --no-install-recommends curl || apk add --no-cache curl) >/dev/null; fi \
     && curl -f -L -s -S "https://raw.githubusercontent.com/alexbelgium/hassio-addons/master/.templates/automatic_packages.sh" --output /automatic_packages.sh \
@@ -60,7 +62,7 @@ RUN if ! command -v bash >/dev/null 2>/dev/null; then (apt-get update && apt-get
 
 # Install mustache
 # spellcheck disable=SC2015
-# hadolint ignore=SC2015,DL3017
+# hadolint ignore=SC2015,DL3017,DL3018
 RUN apk add --no-cache \
     go \
     npm \
